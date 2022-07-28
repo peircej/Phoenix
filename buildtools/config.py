@@ -1055,10 +1055,6 @@ def updateLicenseFiles(cfg):
         copy_file(opj(cfg.WXDIR, 'docs', filename), opj('license',filename),
                       update=1, verbose=1)
 
-    # Get the sip license too
-    copy_file(opj('sip', 'siplib', 'LICENSE'), opj('license', 'sip-license.txt'),
-              update=1, verbose=1)
-
     # Combine the relevant files into a single LICENSE.txt file
     text = ''
     for filename in ['preamble.txt', 'licence.txt', 'lgpl.txt', 'sip-license.txt']:
